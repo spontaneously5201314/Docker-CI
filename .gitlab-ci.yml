@@ -1,0 +1,28 @@
+stages:
+  - build
+  - test
+  - deploy
+
+job1:
+  stage: build
+  tags:
+    - demo
+  script:
+    - echo "I am Job1"
+    - echo "I am in build stage"
+
+job2:
+  stage: test
+  tags:
+      - demo
+  script:
+    - echo "I am Job2"
+    - echo "I am in test stage"
+
+job3:
+  stage: deploy
+  tags:
+      - demo
+  script:
+    - echo "I am Job3"
+    - echo "I am in deploy stage"
